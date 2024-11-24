@@ -1,0 +1,6 @@
+<nav class="sub-navbar">
+    <ul>
+      <li *ngIf="currentRoute === 'user'"><button (click)="createUser()">Create User</button></li>
+      <li *ngIf="currentRoute === 'user'"><button (click)="importUsers()">Import Users</button></li>
+    </ul>
+  </nav>
