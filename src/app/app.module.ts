@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { SubNavbarComponent } from './layout/sub-navbar/sub-navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    SidebarComponent,
+    SubNavbarComponent
   ],
   imports: [
     BrowserModule,
