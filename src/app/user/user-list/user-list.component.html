@@ -7,9 +7,11 @@
                 <p>{{ user.username }}</p>
               </div>
             </div>
-            <button mat-icon-button (click)="onDelete(user)">
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
-            </button>
+            <div>
+                <ng-container
+                    *ngTemplateOutlet="actionTemplate; context: { $implicit: user }"
+                ></ng-container>
+            </div>
         </div>
       </mat-list-item>
     </mat-list>

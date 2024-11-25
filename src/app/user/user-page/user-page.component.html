@@ -1,8 +1,20 @@
 <div class="app-container">
     <app-user-list
         [users]="users"
-        (userSelected)="onUserSelected($event)"
+        [actionTemplate]="actionButtons"
         (userSelected)="onUserSelected($event)"
     ></app-user-list>
     <app-user-details [user]="selectedUser"></app-user-details>
 </div>
+
+<ng-template #actionButtons let-usr>
+    <button mat-icon-button (click)="onDelete(usr)">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="onAddToFavourites(usr)">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="onMute(usr)">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="volume_off"></mat-icon>
+    </button>
+</ng-template>
