@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="dashboard">
+    <h2>Dashboard</h2>
+    <p>Total Users: {{ totalUsers }}</p>
+    <p>Total Companies: {{ totalCompanies }}</p>
+    <div *ngFor="let company of usersPerCompany | keyvalue">
+      <p>{{ company.key }}: {{ company.value }} Users</p>
+    </div>
+  </div>
+  

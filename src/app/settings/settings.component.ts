@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SettingsModel } from '@app/shared/models/settings.model';
-import { SettingsService } from '@app/shared/settings.service';
+import { SettingsService } from '@app/services/settings.service';
 
 @Component({
   selector: 'app-settings',

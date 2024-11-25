@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '@app/shared/models/user.model';
+import { UsersFacade } from '@app/store/facades/users.facade';
 
 @Component({
   selector: 'app-user-page',
@@ -11,11 +12,22 @@ export class UserPageComponent implements OnInit {
   public users: User[] = [
   ];
 
+  public constructor(
+    private usersFacade: UsersFacade,
+  ) {
+
+  }
+
   public onUserSelected(user: User): void {
     this.selectedUser = user;
   }
 
   public ngOnInit(): void {
-    
+    this.usersFacade.loadUsers();
+    this.usersFacade.users$.subscribe((users: User[]) => {
+      this.users = users;
+      console.log('users');
+      console.log(users);
+    })
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DateFormat, Language, SettingsModel } from './models/settings.model';
+import { DateFormat, Language, SettingsModel } from '../shared/models/settings.model';
 
 @Injectable({
   providedIn: 'root'

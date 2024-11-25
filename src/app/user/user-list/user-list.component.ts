@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { DialogService } from '@app/shared/dialog.service';
+import { DialogService } from '@app/services/dialog.service';
 import { User } from '@app/shared/models/user.model';
 
 @Component({
@@ -17,7 +17,7 @@ export class UserListComponent{
   onDelete(user: User): void {
     const dialogRef = this.dialogService.openDialog({
       title: 'Delete confirmation',
-      text: `Are you sure you want to delete user ${user.lastName}`
+      text: `Are you sure you want to delete user ${user.username}`
     });
 
     dialogRef.afterClosed().subscribe((result: boolean) => {
