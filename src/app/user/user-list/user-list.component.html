@@ -1,1 +1,17 @@
-<p>user works!</p>
+<div class="user-list-container">
+    <mat-list>
+      <mat-list-item *ngFor="let user of users">
+        <div class="flex-container">
+            <div class="user-info" (click)="onUserClick(user)">
+              <div>
+                <p>{{ user.lastName }}</p>
+              </div>
+            </div>
+            <button mat-icon-button (click)="onDelete(user)">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+            </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

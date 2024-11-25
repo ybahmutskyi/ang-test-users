@@ -1,7 +1,11 @@
 /* Global Styles */
 
 
-@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mdc-list-item.mdc-list-item--with-one-line {
+    height: auto!important;
+}
 
 /* Reset some default browser styles */
 * {
