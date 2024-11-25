@@ -11,6 +11,8 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { SubNavbarComponent } from './layout/sub-navbar/sub-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { userReducer } from './store/reducers/users.reducers';
+import { UserEffects } from './store/effects';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,10 @@ import { userReducer } from './store/reducers/users.reducers';
     BrowserAnimationsModule,
     AppRoutingModule,
     StoreModule.forRoot({users: userReducer}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([UserEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

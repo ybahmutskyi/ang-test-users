@@ -12,7 +12,7 @@ import { User } from '@app/shared/models/user.model';
 /* eslint-disable */
 
 @Injectable()
-export class TimesheetsEffects {
+export class UserEffects {
   public constructor(
     private actions$: Actions,
     private userService: UserService,

@@ -17,7 +17,7 @@ export class UserListComponent{
   onDelete(user: User): void {
     const dialogRef = this.dialogService.openDialog({
       title: 'Delete confirmation',
-      text: `Are you sure you want to delete user ${user.username}`
+      text: `Are you sure you want to delete user ${user.username}?`
     });
 
     dialogRef.afterClosed().subscribe((result: boolean) => {
